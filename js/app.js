@@ -44,6 +44,15 @@ document.getElementById('align-justify').addEventListener('click', function () {
     getTextAlignById('text-area', "justify");
 })
 
+/* -----------------Font-Size------------- */
+document.getElementById('font-size').addEventListener('change', function(event){
+    if ( event.target.value < 14){
+        event.target.value = 14;
+    }
+    const textArea = document.getElementById('text-area');
+    textArea.style.fontSize = `${event.target.value}px`;
+})
+
 // Common-function....
 function getTextAlignById(id, value) {
     const textArea = document.getElementById(id);

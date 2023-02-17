@@ -74,6 +74,19 @@ document.getElementById('small-case').addEventListener('click', function(){
     textAreaElement.value = textArea;
 })
 
+// text capitalized the first letter of each sentence
+document.getElementById('first-case-capital').addEventListener('click',(event)=>{
+    const textElement = document.getElementById('text-area');
+    const text = textElement.value;
+    const newText = text.split('.');
+    let newTextArr= [];
+    newText.forEach((value)=>{
+        newTextArr.push(value.trim().charAt(0).toUpperCase() + value.trim().slice(1));
+    })
+    const updatedText= newTextArr.join('. ');
+    textElement.value = updatedText;
+});
+
 // Common-function....
 function getTextAlignById(id, value) {
     const textArea = document.getElementById(id);

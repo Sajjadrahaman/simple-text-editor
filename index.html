@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-Awesome link -->
+    <script src="https://kit.fontawesome.com/8a36f5f5c7.js" crossorigin="anonymous"></script>
+    <!-- cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Simple Text Editor</title>
+    <!-- tailwind-css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-2xl text-center mt-10 font-semibold">Simple Text Editor</h1>
+    </header>
+    <main class="bg-sky-300 md:w-11/12 mx-auto mt-6">
+        <section class="md:flex justify-between md:mx-6 space-y-1 p-8">
+
+            <div class="md:flex space-x-6">
+                <button id="bold" class="hover:bg-neutral-300 w-10 rounded-lg"><i class="fa-solid fa-bold"></i></button>
+                <button id="italic" class="hover:bg-neutral-300 w-10 rounded-lg"><i class="fa-solid fa-italic"></i></button>
+                <button id="underline" class="hover:bg-neutral-300 w-10 rounded-lg"><i class="fa-solid fa-underline"></i></button>
+            </div>
+
+            <div class=" md:flex space-x-4">
+                <button id="align-center" class="text-xl hover:bg-neutral-300 w-10 rounded-lg"><i class="fa-solid fa-align-center"></i></button>
+                <button id="align-left" class="text-xl hover:bg-neutral-300 w-10 rounded-lg"><i class="fa-solid fa-align-left"></i></button>
+                <button id="align-right" class="text-xl hover:bg-neutral-300 w-10 rounded-lg"><i class="fa-solid fa-align-right"></i></button>
+                <button id="align-justify" class="text-xl hover:bg-neutral-300 w-10 rounded-lg"><i class="fa-solid fa-align-justify"></i></button>
+            </div>
+
+            <div class="md:flex space-x-2">
+                <!-- Font-Size -->
+                <input id="font-size" class="w-12 h-8 p-1 text-lg font-semibold" type="number" name="font-size" value="14">
+                <!-- Letter Case -->
+                <button id="first-case-capital" class="text-lg hover:bg-neutral-300 w-10 rounded-lg">Aa</button>
+                <button id="capital-case" class="text-xs font-bold font-serif hover:bg-neutral-300 w-10 rounded-lg">ABC</button>
+                <button id="small-case" class="text-base hover:bg-neutral-300 w-10 rounded-lg">ab</button>
+                <!-- color-code -->
+                <input id="color-code" type="color" name="color-code" value="#000000">
+            </div>
+        </section>
+
+        <section>
+            <div>
+             <textarea class="mb-4 md:p-4 w-11/12 block mx-auto" name="" id="text-area"  rows="12"></textarea>
+            </div>
+        </section>
+        <footer>
+            <div class="text-right text-xs px-14 py-6">
+                all right reserved by @sajjad_2023
+            </div>
+        </footer>
+    </main>
+
+    <!-- attached js-file -->
+</body>
+
+</html>

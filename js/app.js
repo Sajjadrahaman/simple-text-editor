@@ -53,6 +53,27 @@ document.getElementById('font-size').addEventListener('change', function(event){
     textArea.style.fontSize = `${event.target.value}px`;
 })
 
+/* ---------------Color-Code ------------------- */
+document.getElementById('color-code').addEventListener('change', function(event){
+    const textArea = document.getElementById('text-area');
+    textArea.style.color = event.target.value;
+})
+
+/* ---------------- Capital & Small Case --------------- */
+document.getElementById('capital-case').addEventListener('click', function(){
+    const textAreaElement = document.getElementById("text-area");
+    const textAreaValue = textAreaElement.value;
+    const textArea = textAreaValue.toUpperCase();
+    textAreaElement.value = textArea;
+})
+
+document.getElementById('small-case').addEventListener('click', function(){
+    const textAreaElement = document.getElementById("text-area");
+    const textAreaValue = textAreaElement.value;
+    const textArea = textAreaValue.toLowerCase();
+    textAreaElement.value = textArea;
+})
+
 // Common-function....
 function getTextAlignById(id, value) {
     const textArea = document.getElementById(id);

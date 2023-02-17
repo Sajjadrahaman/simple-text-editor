@@ -29,3 +29,23 @@ document.getElementById('underline').addEventListener('click', function () {
     }
 })
 
+/* -----------------Text-Align Area---------------- */
+document.getElementById('align-center').addEventListener('click', function () {
+    getTextAlignById('text-area', "center");
+})
+
+document.getElementById('align-left').addEventListener('click', function () {
+    getTextAlignById('text-area', "left");
+})
+document.getElementById('align-right').addEventListener('click', function () {
+    getTextAlignById('text-area', "right");
+})
+document.getElementById('align-justify').addEventListener('click', function () {
+    getTextAlignById('text-area', "justify");
+})
+
+// Common-function....
+function getTextAlignById(id, value) {
+    const textArea = document.getElementById(id);
+    textArea.style.textAlign = value;
+}
